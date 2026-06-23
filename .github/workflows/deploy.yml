@@ -18,6 +18,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # La app vive en la subcarpeta portfolio/, los comandos npm se ejecutan ahi
+    defaults:
+      run:
+        working-directory: portfolio
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,6 +31,7 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: portfolio/package-lock.json
 
       - name: Instalar dependencias
         run: npm ci
@@ -45,7 +50,7 @@ jobs:
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: portfolio/dist
 
   deploy:
     needs: build
