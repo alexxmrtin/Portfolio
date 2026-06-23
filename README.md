@@ -16,7 +16,7 @@ Su pieza central es un **motor RAG (Retrieval-Augmented Generation)** profesiona
 
 Más allá de la IA, Cortex permite **controlar servicios remotos por SSH**: encenderlos y apagarlos ejecutando comandos en su máquina, con las credenciales **cifradas en reposo con Fernet** y nunca expuestas. Cada servicio dispone además de un **panel de monitorización en vivo** (latencia, CPU, RAM, disco y carga del sistema) leído por SSH y cacheado en Redis, con tolerancia a fallos para que la vista nunca se rompa si la máquina remota cae.
 
-[📂 Ver proyecto](./Cortex) · [📄 Documentación](./Cortex/README.md)
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/Cortex)
 
 ---
 
@@ -30,7 +30,7 @@ La seguridad es uno de sus pilares: **autenticación stateless con JWT** (firmad
 
 Para optimizar el rendimiento integra **caché distribuida con Redis** sobre las consultas frecuentes, con TTL configurable e invalidación automática en cada operación de escritura, además de un sistema de logging que registra errores y anomalías de la base de datos para facilitar la auditoría.
 
-[📂 Ver proyecto](./APIRestful_Empleados) · [📄 Documentación](./APIRestful_Empleados/README.txt)
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/API_RESTFUL_EMPLEADOS)
 
 ---
 
@@ -44,7 +44,7 @@ El sistema automatiza tanto las modificaciones como las consultas a través de *
 
 Implementa un control de acceso basado en **cuatro roles** con privilegios diferenciados: **Administrador** (control total, incluida la estructura y los usuarios), **Gerente** (gestión completa de datos sin tocar la estructura), **Recepcionista** (consulta general y modificación de ciertos registros) y **Empleado** (acceso de solo lectura).
 
-[📂 Ver proyecto](./ReservasHotel) · [📄 Documentación](./ReservasHotel/README.txt)
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/ReservasHotel)
 
 ---
 
@@ -58,7 +58,7 @@ Automatiza buena parte del trabajo previo: realiza un **preprocesamiento** que m
 
 Finalmente evalúa el resultado con métricas adecuadas a cada caso —**F1-score** en clasificación, **R² y MSE** en regresión— y ofrece visualizaciones que ayudan a interpretarlo, como la **matriz de confusión** o el gráfico de dispersión de predicciones frente a valores reales. Está construido con Pandas, NumPy, Matplotlib y Scikit-learn.
 
-[📂 Ver proyecto](./SVM_RandomForest_Interactivo) · [📄 Documentación](./SVM_RandomForest_Interactivo/README.txt)
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/SVMRandomForest_Interactivo)
 
 ---
 
