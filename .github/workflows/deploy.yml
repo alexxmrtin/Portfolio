@@ -51,7 +51,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: Web Portfolio
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Desplegar
