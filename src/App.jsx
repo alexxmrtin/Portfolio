@@ -12,7 +12,7 @@ export default function App() {
   const t = translations[lang];
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Header
         lang={lang}
         onLangToggle={() => setLang((l) => (l === "en" ? "es" : "en"))}
