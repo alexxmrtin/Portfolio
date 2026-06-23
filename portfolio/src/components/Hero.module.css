@@ -112,32 +112,99 @@
   50% { transform: translateY(3px); }
 }
 
-.secondary {
-  display: inline-flex;
+.socials {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 0.9rem 1.4rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  transition: color 0.2s, border-color 0.2s, gap 0.2s;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.secondary:hover {
+.socialBtn:hover {
   color: var(--text-primary);
-  border-color: var(--border-strong);
-  gap: 0.75rem;
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.07);
 }
 
-.arrowR {
-  transition: transform 0.2s;
+.socialBtnActive {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.07);
 }
 
-.secondary:hover .arrowR {
-  transform: translateX(3px);
+.emailWrapper {
+  position: relative;
+}
+
+.emailPanel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.15s ease;
+  z-index: 10;
+}
+
+.emailPanel::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: var(--surface);
+  border-left: 1px solid var(--accent);
+  border-top: 1px solid var(--accent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.emailAddress {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.copyBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
 }
 
 /* Vertical meta strip on the right edge */

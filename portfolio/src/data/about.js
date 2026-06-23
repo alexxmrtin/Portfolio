@@ -12,5 +12,10 @@ export const aboutData = {
       label: "GitHub",
       url: "https://github.com/alexxmrtin",
     },
+    {
+      id: "email",
+      label: "Email",
+      url: "mailto:am970110@gmail.com",
+    },
   ],
 };
