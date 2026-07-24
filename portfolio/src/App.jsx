@@ -1,0 +1,26 @@
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import { translations } from "./i18n";
+import "./index.css";
+
+export default function App() {
+  const [lang, setLang] = useState("es");
+  const t = translations[lang];
+
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <Header
+        lang={lang}
+        onLangToggle={() => setLang((l) => (l === "en" ? "es" : "en"))}
+        t={t}
+      />
+      <Routes>
+        <Route path="/" element={<HomePage lang={lang} t={t} />} />
+      </Routes>
+      <Footer t={t} />
+    </BrowserRouter>
+  );
+}
