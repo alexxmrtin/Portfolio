@@ -25,7 +25,7 @@ export const projects = [
         "Además gestiona servicios remotos por SSH para arrancarlos y detenerlos en su propia máquina, con credenciales cifradas en reposo, y un panel de monitorización en vivo de latencia y uso de CPU/RAM/disco cacheado en Redis.",
       ],
     },
-    link: "https://github.com/alexxmrtin/Portfolio/tree/main/Cortex",
+    link: "https://github.com/alexxmrtin/Cortex",
     tags: ["React", "FastAPI", "SQLAlchemy", "RAG", "JWT", "Redis", "SSH"],
     images: [
       asset("projects/cortex-6.png"),
@@ -38,6 +38,39 @@ export const projects = [
   },
   {
     id: 2,
+    name: {
+      en: "GymPulse",
+      es: "GymPulse",
+    },
+    type: {
+      en: "Mobile App",
+      es: "Aplicación Móvil",
+    },
+    description: {
+      en: [
+        "Mobile app to log and track gym workouts, built to learn how mobile development works from the inside: a native Android client in Kotlin with Jetpack Compose, backed by a REST API in Spring Boot 4 and Java 21 on PostgreSQL. It was also the project to learn Spring Boot and OAuth 2.0, carrying over the good practices from previous projects",
+        "Security is one of its pillars: short-lived JWT access tokens and rotating refresh tokens stored only as hashes, with reuse detection that revokes every session of the user. Account email verification, sign-in with Google through OAuth 2.0 / OpenID Connect, login rate limiting, and every user can only reach their own data.",
+        "Features include account customization (profile photo, physical data, kg/lb units, language and theme), live workout tracking with a timer and sets of reps and weight, a catalog of predefined exercises plus custom ones, workout history with the detail of each session, a calendar with weekly streak, and weight progression charts per exercise.",
+      ],
+      es: [
+        "Aplicación móvil para registrar y seguir entrenamientos de gimnasio, nacida para aprender cómo funciona el desarrollo móvil por dentro: un cliente nativo Android en Kotlin con Jetpack Compose, respaldado por una API REST en Spring Boot 4 y Java 21 sobre PostgreSQL. El proyecto tambien se desarrollo para aprender Spring Boot y OAuth 2.0, manteniendo las buenas prácticas de proyectos anteriores.",
+        "La seguridad es uno de sus pilares: tokens de acceso JWT de corta duración y tokens de refresco rotatorios guardados solo como hash, con detección de reutilización que revoca todas las sesiones del usuario. Verificación del email de la cuenta, inicio de sesión con Google mediante OAuth 2.0 / OpenID Connect, límite de intentos de login y cada usuario solo puede acceder a sus propios datos.",
+        "Entre sus funcionalidades: personalización de la cuenta (foto de perfil, datos físicos, unidades kg/lb, idioma y tema), seguimiento del entrenamientos en curso con cronómetro y series de repeticiones y peso, catálogo de ejercicios predefinidos y personalizados, historial de entrenamientos con el detalle de cada sesión, calendario con racha semanal y gráficas de progresión de peso por ejercicio.",
+      ],
+    },
+    link: "https://github.com/alexxmrtin/GymPulse",
+    tags: ["Kotlin", "Spring Boot", "Java", "PostgreSQL", "OAuth2", "JWT"],
+    images: [
+      asset("projects/gympulse-1.png"),
+      asset("projects/gympulse-2.png"),
+      asset("projects/gympulse-3.png"),
+      asset("projects/gympulse-4.png"),
+      asset("projects/gympulse-5.png"),
+      asset("projects/gympulse-6.png"),
+    ],
+  },
+  {
+    id: 3,
     name: {
       en: "APIEmpleados",
       es: "APIEmpleados",
@@ -56,12 +89,12 @@ export const projects = [
         "Protegida con autenticación JWT stateless, control de acceso granular por roles, caché distribuida con Redis para optimizar consultas y rate limiting para prevenir ataques de fuerza bruta.",
       ],
     },
-    link: "https://github.com/alexxmrtin/Portfolio/tree/main/APIRestful_Empleados",
+    link: "https://github.com/alexxmrtin/API_RESTFUL_EMPLEADOS",
     tags: ["PHP 8", "MySQL", "JWT", "Redis"],
     images: [],
   },
   {
-    id: 3,
+    id: 4,
     name: {
       en: "ReservasHotel",
       es: "ReservasHotel",
@@ -80,12 +113,12 @@ export const projects = [
         "Contempla tipos de habitación, servicios añadibles a reservas y generación automática de pagos. Implementa triggers, procedimientos almacenados, índices, vistas y scripts de backup, con cuatro roles de usuario diferenciados para el control de acceso.",
       ],
     },
-    link: "https://github.com/alexxmrtin/Portfolio/tree/main/ReservasHotel",
+    link: "https://github.com/alexxmrtin/ReservasHotel",
     tags: ["SQL Server", "T-SQL"],
     images: [],
   },
   {
-    id: 4,
+    id: 5,
     name: {
       en: "Interactive SVM & Random Forest",
       es: "SVM y Random Forest Interactivo",
@@ -104,7 +137,7 @@ export const projects = [
         "Incluye preprocesamiento automático, selección de las 10 características más relevantes, optimización de hiperparámetros con GridSearchCV y división estratificada en train/validación/test. Reporta F1-score en clasificación y R²/MSE en regresión, junto con una matriz de confusión o gráfico de dispersión.",
       ],
     },
-    link: "https://github.com/alexxmrtin/Portfolio/tree/main/SVM_RandomForest_Interactivo",
+    link: "https://github.com/alexxmrtin/SVMRandomForest_Interactivo",
     tags: ["Python", "scikit-learn", "pandas", "matplotlib"],
     images: [],
   },
