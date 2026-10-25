@@ -39,6 +39,35 @@ export const projects = [
   {
     id: 2,
     name: {
+      en: "Cloud Infrastructure AWS",
+      es: "Infraestructura Cloud AWS",
+    },
+    type: {
+      en: "Cloud Infrastructure",
+      es: "Infraestructura Cloud",
+    },
+    description: {
+      en: [
+        "Complete AWS infrastructure defined 100% as code with Terraform and organized into modules (network, security, data, compute, edge, serverless, observability and cost), based on the AWS Solutions Architect Associate (SAA-C03) syllabus. So that every service has a reason to be there, everything revolves around ShopFlow, a sample online store (catalog, cart and orders) where what matters is the infrastructure. The project was built to learn AWS infrastructure, deployment and CI/CD.",
+        "Requests come in through Route 53 and CloudFront with WAF, which serves the website from a private S3 bucket and forwards the API to an ALB that only accepts that distribution. Behind it, a FastAPI API runs on ECS over Graviton EC2 with task and instance autoscaling, inside a 2-AZ VPC with three subnet tiers where the data layer (RDS PostgreSQL and ElastiCache Valkey) has no Internet access. Orders are processed asynchronously: SNS fans them out to SQS queues with DLQs, and a Step Functions workflow with compensation reserves stock, charges, generates the PDF invoice and confirms, with idempotency at every step.",
+        "It is deployed with GitHub Actions without access keys thanks to OIDC, using two roles (read-only plan and apply with manual approval) and checks with tflint, checkov and Infracost on every PR. Security follows least privilege: dedicated KMS keys, secrets rotated in Secrets Manager, CloudTrail, GuardDuty and administration through SSM with no SSH. It is completed with observability in CloudWatch (dashboard, 15 alarms, business metrics with EMF and X-Ray) and cost control with budgets, anomaly detection and an environment created and destroyed per session.",
+      ],
+      es: [
+        "Infraestructura AWS completa definida al 100 % como código con Terraform y organizada en módulos (red, seguridad, datos, cómputo, edge, serverless, observabilidad y coste), basada en el temario de AWS Solutions Architect Associate (SAA-C03). Para que cada servicio tenga un motivo para estar ahí, todo gira alrededor de ShopFlow, una tienda online de ejemplo (catálogo, carrito y pedidos) donde lo importante es la infraestructura. El proyecto nació para aprender infraestructura en AWS, despliegue y CI/CD.",
+        "Las peticiones entran por Route 53 y CloudFront con WAF, que sirve la web desde un bucket S3 privado y manda la API a un ALB que solo admite a esa distribución. Detrás, una API FastAPI corre en ECS sobre EC2 Graviton con autoscaling de tareas e instancias, dentro de una VPC en 2 AZ con tres capas de subredes donde la capa de datos (RDS PostgreSQL y ElastiCache Valkey) no tiene salida a Internet. Los pedidos se procesan de forma asíncrona: SNS los reparte a colas SQS con DLQ y un flujo de Step Functions con compensación reserva el stock, cobra, genera la factura en PDF y confirma, con idempotencia en cada paso.",
+        "Se despliega con GitHub Actions sin access keys gracias a OIDC, con dos roles (plan de solo lectura y apply con aprobación manual) y validaciones con tflint, checkov e Infracost en cada PR. La seguridad sigue el principio de mínimo privilegio: claves KMS propias, secretos rotados en Secrets Manager, CloudTrail, GuardDuty y administración por SSM sin SSH. Se completa con observabilidad en CloudWatch (dashboard, 15 alarmas, métricas de negocio con EMF y X-Ray) y control del coste con presupuestos, detección de anomalías y un entorno que se crea y se destruye en cada sesión.",
+      ],
+    },
+    link: "https://github.com/alexxmrtin/Infraestructura-Cloud-AWS",
+    tags: ["AWS", "Terraform", "GitHub Actions", "ECS", "Lambda", "Step Functions", "FastAPI"],
+    images: [
+      asset("projects/InfraestructuraAWS-1.png"),
+      asset("projects/InfraestructuraAWS-2.png"),
+    ],
+  },
+  {
+    id: 3,
+    name: {
       en: "GymPulse",
       es: "GymPulse",
     },
@@ -70,7 +99,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: {
       en: "APIEmpleados",
       es: "APIEmpleados",
@@ -94,7 +123,7 @@ export const projects = [
     images: [],
   },
   {
-    id: 4,
+    id: 5,
     name: {
       en: "ReservasHotel",
       es: "ReservasHotel",
@@ -118,7 +147,7 @@ export const projects = [
     images: [],
   },
   {
-    id: 5,
+    id: 6,
     name: {
       en: "Interactive SVM & Random Forest",
       es: "SVM y Random Forest Interactivo",

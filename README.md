@@ -20,7 +20,35 @@ Más allá de la IA, Cortex permite **controlar servicios remotos por SSH**: enc
 
 ---
 
-### 2. API RESTful — Sistema de Gestión de Empleados
+### 2. Infraestructura Cloud AWS
+
+**AWS · Terraform · GitHub Actions · ECS · Serverless · FastAPI**
+
+Infraestructura AWS completa definida **100 % como código con Terraform**, organizada en módulos (red, seguridad, datos, cómputo, edge, serverless, observabilidad y coste) y basada en el temario de **AWS Solutions Architect Associate (SAA-C03)**. Para que cada servicio tenga un motivo para estar ahí, todo gira alrededor de **ShopFlow**, una tienda online de ejemplo (catálogo, carrito y pedidos) donde lo importante es la infraestructura. El proyecto nació para aprender infraestructura en AWS, despliegue y CI/CD.
+
+Las peticiones entran por **Route 53 y CloudFront con WAF**, que sirve la web desde un bucket S3 privado y manda la API a un **ALB** que solo admite a esa distribución. Detrás, una API FastAPI corre en **ECS sobre EC2 Graviton** con autoscaling de tareas e instancias, dentro de una **VPC en 2 AZ con tres capas de subredes** donde la capa de datos (RDS PostgreSQL y ElastiCache Valkey) no tiene salida a Internet. Los pedidos se procesan de forma **asíncrona**: SNS los reparte a colas SQS con DLQ y un flujo de **Step Functions con compensación** reserva el stock, cobra, genera la factura en PDF y confirma, con idempotencia en cada paso.
+
+Se despliega con **GitHub Actions sin access keys gracias a OIDC**, con dos roles (plan de solo lectura y apply con aprobación manual) y validaciones con tflint, checkov e **Infracost** en cada PR. La seguridad sigue el principio de **mínimo privilegio**: claves KMS propias, secretos rotados en Secrets Manager, CloudTrail, GuardDuty y administración por SSM sin SSH. Se completa con **observabilidad en CloudWatch** (dashboard, 15 alarmas, métricas de negocio con EMF y X-Ray) y **control del coste** con presupuestos, detección de anomalías y un entorno que se crea y se destruye en cada sesión.
+
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/Infraestructura-Cloud-AWS)
+
+---
+
+### 3. GymPulse
+
+**Kotlin · Jetpack Compose · Spring Boot · Java 21 · PostgreSQL · OAuth 2.0 · JWT**
+
+GymPulse es una **aplicación móvil para registrar y seguir entrenamientos de gimnasio**, nacida para aprender cómo funciona el desarrollo móvil por dentro: un **cliente nativo Android en Kotlin con Jetpack Compose**, respaldado por una **API REST en Spring Boot 4 y Java 21** sobre PostgreSQL. El proyecto también sirvió para aprender Spring Boot y OAuth 2.0, manteniendo las buenas prácticas de proyectos anteriores.
+
+La seguridad es uno de sus pilares: **tokens de acceso JWT de corta duración** y **tokens de refresco rotatorios** guardados solo como hash, con **detección de reutilización** que revoca todas las sesiones del usuario. Incluye verificación del email de la cuenta, **inicio de sesión con Google mediante OAuth 2.0 / OpenID Connect**, límite de intentos de login, y cada usuario solo puede acceder a sus propios datos.
+
+Entre sus funcionalidades: personalización de la cuenta (foto de perfil, datos físicos, unidades kg/lb, idioma y tema), **seguimiento del entrenamiento en curso** con cronómetro y series de repeticiones y peso, catálogo de ejercicios predefinidos y personalizados, **historial** con el detalle de cada sesión, **calendario con racha semanal** y **gráficas de progresión de peso** por ejercicio.
+
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/GymPulse)
+
+---
+
+### 4. API RESTful — Sistema de Gestión de Empleados
 
 **PHP 8 · MySQL · REST · JWT · Redis**
 
@@ -34,7 +62,7 @@ Para optimizar el rendimiento integra **caché distribuida con Redis** sobre las
 
 ---
 
-### 3. Sistema de Gestión de Reservas Hoteleras
+### 5. Sistema de Gestión de Reservas Hoteleras
 
 **SQL Server · T-SQL · Base de Datos Relacional**
 
@@ -48,7 +76,7 @@ Implementa un control de acceso basado en **cuatro roles** con privilegios difer
 
 ---
 
-### 4. ML Interactivo: SVM & Random Forest
+### 6. ML Interactivo: SVM & Random Forest
 
 **Python · Scikit-learn · Machine Learning**
 
