@@ -6,10 +6,10 @@ export const translations = {
     },
     hero: {
       name: "Alejandro Martín Puertas",
-      role: "Computer Engineer",
+      role: "Systems Administration Technician (ASIR) · Computer Engineering student",
       summary:
-        "Passionate about technology and building things. Focused on AI, cybersecurity and systems infrastructure.",
-      location: "Spain",
+        "Systems and cloud (AWS), cybersecurity and applied AI. Top 3% worldwide on TryHackMe. Looking for my first IT job in Granada, Spain.",
+      location: "Granada, Spain",
       cta: "View projects",
       secondary: "About me",
     },
@@ -26,8 +26,9 @@ export const translations = {
       label: "Who I am",
       title: "About me",
       bio: [
-        "My name is Alejandro Martín Puertas, I'm 23 years old and a Computer Engineer passionate about technology and software development. Ever since I was young I felt the need to understand how the machines my father used for work actually worked — and that curiosity has driven my interest across many areas of computer science.",
-        "I'm currently looking for opportunities to apply my knowledge in challenging projects where I can keep growing professionally and bring value through my technical skills and dedication.",
+        "My name is Alejandro Martín Puertas. I hold a Higher Technician degree in Network Systems Administration (ASIR) and I'm in the final year of a Computer Engineering degree at VIU, finishing in 2027. Ever since I was young I wanted to understand how the machines my father used for work actually worked, and that curiosity led me to systems, cybersecurity and artificial intelligence.",
+        "I keep learning constantly: I practise cybersecurity on TryHackMe, where I'm in the top 3% worldwide, and I have prepared on my own for AWS Solutions Architect, CompTIA Security+, CCNA and LPIC-1. I did my internship as a software developer at VirtualDoing, working with Java and Docker in a team with daily stand-ups.",
+        "I'm now looking for my first IT job in Granada, in systems, cloud, cybersecurity or AI, where I can keep learning and add value from day one.",
       ],
       contact: "Contact",
     },
@@ -43,10 +44,10 @@ export const translations = {
     },
     hero: {
       name: "Alejandro Martín Puertas",
-      role: "Ingeniero Informático",
+      role: "Técnico superior en ASIR · Estudiante de Ingeniería Informática",
       summary:
-        "Me apasiona la tecnologia y construir cosas. Centrado en IA, ciberseguridad e infraestructura de sistemas.",
-      location: "España",
+        "Sistemas y cloud (AWS), ciberseguridad e IA aplicada. Top 3 % mundial en TryHackMe. Busco mi primer empleo en IT en Granada.",
+      location: "Granada, España",
       cta: "Ver proyectos",
       secondary: "Sobre mí",
     },
@@ -63,8 +64,9 @@ export const translations = {
       label: "Quién soy",
       title: "Sobre mí",
       bio: [
-        "Mi nombre es Alejandro Martín Puertas, tengo 23 años y soy Ingeniero Informático apasionado por la tecnología y el desarrollo de software. Desde pequeño he sentido la necesidad de entender cómo funcionaban las máquinas que usaba mi padre para trabajar, y desde entonces me ha movido el interés por muchas áreas de la informática con el fin de saciar esa curiosidad.",
-        "Actualmente busco oportunidades para aplicar mis conocimientos en proyectos desafiantes donde pueda seguir creciendo profesionalmente y aportar valor mediante mi capacidad técnica y dedicación.",
+        "Me llamo Alejandro Martín Puertas. Soy técnico superior en ASIR y estoy en el último año del Grado en Ingeniería Informática en la VIU, que terminaré en 2027. Desde pequeño he sentido la necesidad de entender cómo funcionaban las máquinas que usaba mi padre para trabajar, y esa curiosidad me ha llevado a los sistemas, la ciberseguridad y la inteligencia artificial.",
+        "Me formo de forma constante: practico ciberseguridad en TryHackMe, donde estoy en el top 3 % mundial, y he preparado por mi cuenta AWS Solutions Architect, CompTIA Security+, CCNA y LPIC-1. Hice mis prácticas como desarrollador de software en VirtualDoing, trabajando con Java y Docker en un equipo con reuniones diarias.",
+        "Ahora busco mi primer empleo en IT en Granada, en sistemas, cloud, ciberseguridad o IA, donde pueda seguir aprendiendo y aportar desde el primer día.",
       ],
       contact: "Contacto",
     },

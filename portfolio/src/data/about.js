@@ -7,7 +7,7 @@ export const aboutData = {
     {
       id: "linkedin",
       label: "LinkedIn",
-      url: "https://linkedin.com", //Ponlo cuando eso
+      url: "https://www.linkedin.com/in/alejandro-martin-puertas-7781592bb",
     },
     {
       id: "github",
