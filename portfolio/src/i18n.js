@@ -8,7 +8,7 @@ export const translations = {
       name: "Alejandro Martín Puertas",
       role: "Systems Administration Technician (ASIR) · Computer Engineering student",
       summary:
-        "Systems and cloud (AWS), cybersecurity and applied AI. Top 3% worldwide on TryHackMe. Looking for my first IT job in Granada, Spain.",
+        "Systems and cloud (AWS), cybersecurity and applied AI.",
       location: "Granada, Spain",
       cta: "View projects",
       secondary: "About me",
@@ -46,7 +46,7 @@ export const translations = {
       name: "Alejandro Martín Puertas",
       role: "Técnico superior en ASIR · Estudiante de Ingeniería Informática",
       summary:
-        "Sistemas y cloud (AWS), ciberseguridad e IA aplicada. Top 3 % mundial en TryHackMe. Busco mi primer empleo en IT en Granada.",
+        "Sistemas y cloud (AWS), ciberseguridad e IA aplicada.",
       location: "Granada, España",
       cta: "Ver proyectos",
       secondary: "Sobre mí",
