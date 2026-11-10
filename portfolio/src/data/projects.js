@@ -66,6 +66,37 @@ export const projects = [
     ],
   },
   {
+    id: 7,
+    name: {
+      en: "AI Assistant",
+      es: "Asistente IA",
+    },
+    type: {
+      en: "AI Agent",
+      es: "Agente de IA",
+    },
+    description: {
+      en: [
+        "Personal AI assistant used from Telegram or the terminal. It reads your Google Calendar and Gmail, answers questions about your schedule and inbox, and proposes actions (replying to an email, creating, moving or deleting events) that only run when you approve them with a button. The project was built to learn LangGraph and LangChain and to connect an LLM to real services safely.",
+        "It is built as a LangGraph state graph. Each message is classified as a query or an action using structured output. Actions pause with interrupt() until you approve them, and the state is stored in PostgreSQL, so they can be approved even after the bot restarts. Calendar and Gmail are connected through two custom MCP servers. It works with Claude, Gemini or Ollama by changing one variable, and when the conversation exceeds its token budget, it summarizes the older part.",
+        "Security is designed against indirect prompt injection (OWASP LLM01). The query agent only has read tools, write tools are blocked outside the approval flow, and Google permissions are kept to the minimum. It is tested with 77 tests that use a fake LLM, contract tests for the MCP servers and 30 evals against the real model. It is deployed with Docker Compose, sends traces to Langfuse and has CI on GitHub Actions with gitleaks, ruff and pytest.",
+      ],
+      es: [
+        "Asistente personal con IA que se usa desde Telegram o desde la terminal. Lee tu Google Calendar y tu Gmail, responde a preguntas sobre tu agenda y tus correos, y propone acciones (responder un correo, crear, mover o borrar eventos) que solo se ejecutan cuando las apruebas con un botón. El proyecto nació para aprender LangGraph y LangChain y para conectar un LLM a servicios reales de forma segura.",
+        "Está construido como un grafo de estados en LangGraph. Cada mensaje se clasifica como consulta o acción con salida estructurada. Las acciones se pausan con interrupt() hasta que las apruebas, y el estado se guarda en PostgreSQL, así que se pueden aprobar incluso después de reiniciar el bot. Calendar y Gmail se conectan mediante dos servidores MCP propios. Funciona con Claude, Gemini u Ollama cambiando una variable, y cuando la conversación supera el presupuesto de tokens, resume la parte antigua.",
+        "La seguridad está pensada contra la inyección de instrucciones indirecta (OWASP LLM01). El agente de consultas solo tiene herramientas de lectura, las de escritura se bloquean fuera del flujo de aprobación y los permisos de Google son los mínimos. Se comprueba con 77 tests que usan un LLM falso, tests de contrato de los servidores MCP y 30 evals con el modelo real. Se despliega con Docker Compose, deja trazas en Langfuse y tiene CI en GitHub Actions con gitleaks, ruff y pytest.",
+      ],
+    },
+    link: "https://github.com/alexxmrtin/AI-Assistant",
+    tags: ["Python", "LangGraph", "LangChain", "MCP", "PostgreSQL", "Telegram", "Docker"],
+    images: [
+      asset("projects/AsistenteIA-1.png"),
+      asset("projects/AsistenteIA-2.png"),
+      asset("projects/AsistenteIA-4.png"),
+      asset("projects/AsistenteIA-3.png"),
+    ],
+  },
+  {
     id: 3,
     name: {
       en: "GymPulse",

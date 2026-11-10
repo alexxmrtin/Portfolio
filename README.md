@@ -34,7 +34,21 @@ Se despliega con **GitHub Actions sin access keys gracias a OIDC**, con dos role
 
 ---
 
-### 3. GymPulse
+### 3. Asistente IA
+
+**Python · LangGraph · LangChain · MCP · PostgreSQL · Telegram · Docker**
+
+Asistente personal con IA que se usa desde **Telegram** o desde la terminal. Lee tu **Google Calendar** y tu **Gmail**, responde a preguntas sobre tu agenda y tus correos, y propone acciones (responder un correo, crear, mover o borrar eventos) que **solo se ejecutan cuando las apruebas** con un botón. El proyecto nació para aprender LangGraph y LangChain y para conectar un LLM a servicios reales de forma segura.
+
+Está construido como un **grafo de estados en LangGraph**. Cada mensaje se clasifica como consulta o acción con salida estructurada. Las acciones se pausan con `interrupt()` hasta que las apruebas, y el estado se guarda en **PostgreSQL**, así que se pueden aprobar incluso después de reiniciar el bot. Calendar y Gmail se conectan mediante **dos servidores MCP propios**. Funciona con **Claude, Gemini u Ollama** cambiando una variable, y cuando la conversación supera el presupuesto de tokens, resume la parte antigua.
+
+La seguridad está pensada contra la **inyección de instrucciones indirecta (OWASP LLM01)**. El agente de consultas solo tiene herramientas de lectura, las de escritura se bloquean fuera del flujo de aprobación y los permisos de Google son los mínimos. Se comprueba con **77 tests** que usan un LLM falso, tests de contrato de los servidores MCP y **30 evals** con el modelo real. Se despliega con **Docker Compose**, deja trazas en **Langfuse** y tiene **CI en GitHub Actions** con gitleaks, ruff y pytest.
+
+[🔗 Ver en GitHub](https://github.com/alexxmrtin/AI-Assistant)
+
+---
+
+### 4. GymPulse
 
 **Kotlin · Jetpack Compose · Spring Boot · Java 21 · PostgreSQL · OAuth 2.0 · JWT**
 
@@ -48,7 +62,7 @@ Entre sus funcionalidades: personalización de la cuenta (foto de perfil, datos 
 
 ---
 
-### 4. API RESTful — Sistema de Gestión de Empleados
+### 5. API RESTful — Sistema de Gestión de Empleados
 
 **PHP 8 · MySQL · REST · JWT · Redis**
 
@@ -62,7 +76,7 @@ Para optimizar el rendimiento integra **caché distribuida con Redis** sobre las
 
 ---
 
-### 5. Sistema de Gestión de Reservas Hoteleras
+### 6. Sistema de Gestión de Reservas Hoteleras
 
 **SQL Server · T-SQL · Base de Datos Relacional**
 
@@ -76,7 +90,7 @@ Implementa un control de acceso basado en **cuatro roles** con privilegios difer
 
 ---
 
-### 6. ML Interactivo: SVM & Random Forest
+### 7. ML Interactivo: SVM & Random Forest
 
 **Python · Scikit-learn · Machine Learning**
 
